@@ -6,6 +6,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.ContextWrapper;
 import android.graphics.Rect;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,8 +16,7 @@ import android.webkit.WebView;
 
 import androidx.appcompat.app.AlertDialog;
 
-public class checkout {
-
+public class Checkout {
 
     public static int MaishaPay(Context mContext, View view, String apiOptions,
                                 String apikey, String gateway_mode, String montant,
@@ -36,6 +36,13 @@ public class checkout {
         }
 
     }
+
+    private static final String TAG = "testLog";
+
+    public static void debug(String message) {
+        Log.d(TAG, message);
+    }
+
 
     @SuppressLint("SetJavaScriptEnabled")
     private static void showPaymentScreen(Activity activity, View view, String apiOptions,
