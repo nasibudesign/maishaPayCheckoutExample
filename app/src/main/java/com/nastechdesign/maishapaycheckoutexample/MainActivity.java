@@ -32,19 +32,7 @@ public class MainActivity extends AppCompatActivity {
         payButton = findViewById(R.id.payButton);
 
         payButton.setOnClickListener(v -> {
-            Rect displayRectangle = new Rect();
-            Window window = MainActivity.this.getWindow();
-            window.getDecorView().getWindowVisibleDisplayFrame(displayRectangle);
-            final AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this, R.style.CustomAlertDialog);
-            ViewGroup viewGroup = findViewById(android.R.id.content);
-            View dialogView = LayoutInflater.from(v.getContext()).inflate(R.layout.dialog, viewGroup, false);
-            dialogView.setMinimumWidth((int) (displayRectangle.width() * 1f));
-            dialogView.setMinimumHeight((int) (displayRectangle.height() * 1f));
-            builder.setView(dialogView);
-            final AlertDialog alertDialog = builder.create();
-            Button buttonOk = dialogView.findViewById(R.id.buttonOk);
-            buttonOk.setOnClickListener(v1 -> alertDialog.dismiss());
-            alertDialog.show();
+
         });
     }
 }
