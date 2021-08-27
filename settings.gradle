@@ -1,0 +1,3 @@
+rootProject.name = "MaishaPay Checkout Example"
+include ':app'
+include ':MaishaPayCheckout'
