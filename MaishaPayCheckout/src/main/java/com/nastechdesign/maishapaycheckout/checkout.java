@@ -45,7 +45,6 @@ public class checkout {
         builder.setView(dialogView);
         final AlertDialog alertDialog = builder.create();
 
-
         WebView mWebView = dialogView.findViewById(R.id.webView);
         WebSettings webSettings = mWebView.getSettings();
         webSettings.setJavaScriptEnabled(true);
